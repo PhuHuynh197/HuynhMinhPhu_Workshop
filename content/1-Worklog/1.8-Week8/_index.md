@@ -19,7 +19,7 @@ pre: " <b> 1.8. </b> "
 
 The following diagram shows the proposed AWS architecture for the **PharmaCare AI – Online Pharmacy Website & AI Chatbot** project.
 
-{{< figure src="/images/proposal/dia1.png" title="AWS Architecture - PharmaCare AI" width="900px" >}}
+{{< figure src="/HuynhMinhPhu_Workshop/images/proposal/dia1.png" title="AWS Architecture - PharmaCare AI" width="900px" >}}
 
 The system is designed using a serverless and managed-service approach on AWS. The frontend is hosted on Amazon S3 and distributed through Amazon CloudFront. User authentication is handled by Amazon Cognito. Business APIs are exposed through Amazon API Gateway and processed by AWS Lambda. The main pharmacy data is stored in Amazon RDS Multi-AZ, while chatbot knowledge retrieval uses Amazon OpenSearch Service as a vector store and Amazon Bedrock for AI response generation.
 

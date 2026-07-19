@@ -41,7 +41,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 17/04/2026 to 09/07/2026
 
-{{< figure src="/images/avata.jpg" alt="Profile picture" width="250px" >}}
+{{< figure src="/HuynhMinhPhu_Workshop/images/avata.jpg" alt="Profile picture" width="250px" >}}
 
 ### Report Content
 

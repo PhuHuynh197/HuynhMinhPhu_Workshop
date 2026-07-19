@@ -109,28 +109,28 @@ The event also helped me understand that building a cloud system is not only abo
 ***(Cloud architecture and serverless challenges)***
 
 <div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
-  <img src="/images/events/event1/anh4.jpg" style="width: 35%; margin: 0;" alt="Serverless architecture challenges">
-  <img src="/images/events/event1/anh5.jpg" style="width: 35%; margin: 0;" alt="AWS architecture sharing">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh4.jpg" style="width: 35%; margin: 0;" alt="Serverless architecture challenges">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh5.jpg" style="width: 35%; margin: 0;" alt="AWS architecture sharing">
 </div>
 
 ***(Virtual Machines vs Containers)***
 
 <div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
-  <img src="/images/events/event1/anh6.jpg" style="width: 35%; margin: 0;" alt="Virtual Machines and Containers comparison">
-  <img src="/images/events/event1/anh7.jpg" style="width: 35%; margin: 0;" alt="Detailed comparison between VM and Container">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh6.jpg" style="width: 35%; margin: 0;" alt="Virtual Machines and Containers comparison">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh7.jpg" style="width: 35%; margin: 0;" alt="Detailed comparison between VM and Container">
 </div>
 
 ***(AWS WAF and Machine Learning for Security)***
 
 <div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
-  <img src="/images/events/event1/anh9.jpg" style="width: 35%; margin: 0;" alt="AWS WAF and Machine Learning session">
-  <img src="/images/events/event1/anh10.jpg" style="width: 35%; margin: 0;" alt="Cyber attack detection with WAF and ML">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh9.jpg" style="width: 35%; margin: 0;" alt="AWS WAF and Machine Learning session">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh10.jpg" style="width: 35%; margin: 0;" alt="Cyber attack detection with WAF and ML">
 </div>
 
 ***(Career orientation and professional sharing)***
 
 <div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
-  <img src="/images/events/event1/anh12.jpg" style="width: 35%; margin: 0;" alt="Career journey from Sysadmin to DevOps">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh12.jpg" style="width: 35%; margin: 0;" alt="Career journey from Sysadmin to DevOps">
 </div>
 
 > In conclusion, AWS Community Day helped me connect my academic knowledge with real cloud practices. It improved my understanding of AWS architecture, serverless systems, cloud security, AI-based security monitoring, and career development in the IT industry.

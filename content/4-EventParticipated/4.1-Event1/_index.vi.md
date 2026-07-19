@@ -109,28 +109,28 @@ Sự kiện cũng giúp em hiểu rằng xây dựng hệ thống cloud không c
 ***(Kiến trúc cloud và thách thức serverless)***
 
 <div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
-  <img src="/images/events/event1/anh4.jpg" style="width: 35%; margin: 0;" alt="Thách thức khi triển khai serverless">
-  <img src="/images/events/event1/anh5.jpg" style="width: 35%; margin: 0;" alt="Chia sẻ kiến trúc AWS">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh4.jpg" style="width: 35%; margin: 0;" alt="Thách thức khi triển khai serverless">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh5.jpg" style="width: 35%; margin: 0;" alt="Chia sẻ kiến trúc AWS">
 </div>
 
 ***(Virtual Machines và Containers)***
 
 <div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
-  <img src="/images/events/event1/anh6.jpg" style="width: 35%; margin: 0;" alt="So sánh Virtual Machines và Containers">
-  <img src="/images/events/event1/anh7.jpg" style="width: 35%; margin: 0;" alt="Chi tiết khác nhau giữa VM và Container">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh6.jpg" style="width: 35%; margin: 0;" alt="So sánh Virtual Machines và Containers">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh7.jpg" style="width: 35%; margin: 0;" alt="Chi tiết khác nhau giữa VM và Container">
 </div>
 
 ***(AWS WAF và Machine Learning trong bảo mật)***
 
 <div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
-  <img src="/images/events/event1/anh9.jpg" style="width: 35%; margin: 0;" alt="AWS WAF và Machine Learning">
-  <img src="/images/events/event1/anh10.jpg" style="width: 35%; margin: 0;" alt="Phát hiện tấn công mạng bằng WAF và ML">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh9.jpg" style="width: 35%; margin: 0;" alt="AWS WAF và Machine Learning">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh10.jpg" style="width: 35%; margin: 0;" alt="Phát hiện tấn công mạng bằng WAF và ML">
 </div>
 
 ***(Định hướng nghề nghiệp và chia sẻ kinh nghiệm thực tế)***
 
 <div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
-  <img src="/images/events/event1/anh12.jpg" style="width: 35%; margin: 0;" alt="Hành trình nghề nghiệp từ Sysadmin đến DevOps">
+  <img src="/HuynhMinhPhu_Workshop/images/events/event1/anh12.jpg" style="width: 35%; margin: 0;" alt="Hành trình nghề nghiệp từ Sysadmin đến DevOps">
 </div>
 
 > Tóm lại, AWS Community Day giúp em kết nối kiến thức học ở trường với thực tế triển khai cloud. Sự kiện giúp em hiểu rõ hơn về kiến trúc AWS, serverless system, cloud security, AI-based security monitoring và định hướng nghề nghiệp trong ngành công nghệ thông tin.
