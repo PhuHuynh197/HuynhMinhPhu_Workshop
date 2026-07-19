@@ -1,125 +1,136 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Sự kiện 1"
+date: 2026-06-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Báo cáo sự kiện: AWS Community Day
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Thông tin sự kiện
 
-### Mục Đích Của Sự Kiện
+* **Tên sự kiện:** AWS Community Day
+* **Thời gian:** 09:00, ngày 06/06/2026
+* **Địa điểm:** Tầng 26, Bitexco Financial Tower
+* **Vai trò tham gia:** Người tham dự
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Mục tiêu sự kiện
 
-### Danh Sách Diễn Giả
+* Tìm hiểu kinh nghiệm triển khai thực tế về AWS Cloud.
+* Hiểu sự khác nhau giữa Virtual Machines, Containers và Serverless architecture.
+* Tìm hiểu các thách thức thực tế khi triển khai hệ thống cloud-native.
+* Biết cách AWS WAF và Machine Learning có thể hỗ trợ phát hiện tấn công mạng.
+* Nhận định hướng nghề nghiệp từ các anh/chị đang làm trong lĩnh vực cloud, system administration, DevOps và cybersecurity.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Mô tả sự kiện
 
-### Nội Dung Nổi Bật
+AWS Community Day là một sự kiện công nghệ tập trung vào cloud computing, kiến trúc hệ thống hiện đại, cybersecurity, artificial intelligence và định hướng nghề nghiệp trong ngành công nghệ thông tin.
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+Sự kiện mang lại nhiều kiến thức thực tế từ các diễn giả đã có kinh nghiệm làm việc với AWS và hệ thống doanh nghiệp. Nội dung không chỉ dừng ở lý thuyết mà còn đề cập đến các vấn đề vận hành, tư duy bảo mật, thiết kế hệ thống và bài học nghề nghiệp.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+Đối với em, sự kiện này rất hữu ích vì nhiều nội dung có liên quan trực tiếp đến dự án thực tập **PharmaCare AI**, đặc biệt là AWS Lambda, API Gateway, CloudFront, WAF, monitoring, serverless architecture và bảo mật có ứng dụng AI.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+### Diễn giả và nội dung chính
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+| Thời gian | Diễn giả | Nội dung chính |
+| --- | --- | --- |
+| 09:20 - 10:00 | Nguyễn Quốc Bảo | Kiến trúc AWS Cloud và kinh nghiệm triển khai thực tế |
+| 10:00 - 10:35 | Nguyễn Huỳnh Quốc Bảo | Virtual Machines, Containers và mô hình triển khai hệ thống |
+| 10:35 - 10:50 | Việt Phát | Serverless architecture và các thách thức khi triển khai |
+| 10:50 - 11:10 | Lê Hoàng Gia Đại | AWS WAF và Machine Learning trong phát hiện tấn công mạng |
+| 11:10 - 12:00 | Trần Trung Vinh | Hành trình từ Sysadmin đến DevOps và kinh nghiệm phỏng vấn |
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+### Nội dung nổi bật
 
-#### Domain-Driven Design (DDD)
+#### 1. So sánh Virtual Machines và Containers
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+Một nội dung quan trọng trong sự kiện là phần so sánh giữa Virtual Machines và Containers.
 
-#### Event-Driven Architecture
+Virtual Machines thường chạy một hệ điều hành riêng trên hypervisor. Cách này giúp tăng tính cô lập nhưng tiêu tốn nhiều CPU, RAM và storage hơn. Trong khi đó, Containers như Docker chia sẻ kernel của hệ điều hành host và chỉ đóng gói ứng dụng cùng các thư viện cần thiết.
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+Vì vậy, container nhẹ hơn, khởi động nhanh hơn và phù hợp hơn với các hệ thống triển khai hiện đại. Nội dung này giúp em hiểu vì sao nhiều hệ thống thực tế sử dụng container hoặc serverless thay vì chỉ dùng máy chủ ảo truyền thống.
 
-#### Compute Evolution
+#### 2. Thách thức khi triển khai Serverless
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+Sự kiện cũng đề cập đến các thách thức thực tế khi sử dụng serverless như AWS Lambda và DynamoDB.
 
-#### Amazon Q Developer
+Mặc dù AWS Lambda giúp giảm công việc quản lý server, nhưng Lambda có tính stateless. Điều này có nghĩa là trạng thái của ứng dụng cần được lưu ở các dịch vụ bên ngoài như database. Nếu truy vấn database không được tối ưu, các thao tác như quét toàn bộ bảng có thể trở nên chậm và tốn chi phí khi hệ thống mở rộng.
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+Bài học này rất hữu ích cho dự án PharmaCare AI vì backend của em cũng sử dụng AWS Lambda. Nó giúp em hiểu rằng Lambda function cần được thiết kế gọn, truy vấn database phải tối ưu và nên tránh xử lý dư thừa.
 
-### Những Gì Học Được
+#### 3. AWS WAF và Machine Learning trong bảo mật
 
-#### Tư Duy Thiết Kế
+Một phần gây ấn tượng khác là chủ đề kết hợp AWS WAF với Machine Learning để phát hiện tấn công mạng.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+Các rule WAF truyền thống thường dựa trên những mẫu tấn công đã biết. Tuy nhiên, các kiểu tấn công hiện đại có thể bao gồm zero-day hoặc hành vi bất thường không khớp với chữ ký có sẵn. Machine Learning có thể hỗ trợ phân tích hành vi traffic và nhận diện các mẫu nghi ngờ.
 
-#### Kiến Trúc Kỹ Thuật
+Với ngành An toàn thông tin của em, nội dung này rất phù hợp. Nó cho thấy AI không chỉ dùng cho chatbot mà còn có thể ứng dụng trong giám sát bảo mật và phòng thủ mạng.
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+#### 4. Hành trình từ Sysadmin đến DevOps
 
-#### Chiến Lược Hiện Đại Hóa
+Phần chia sẻ nghề nghiệp giúp em hiểu rõ hơn về lộ trình phát triển từ Helpdesk hoặc Sysadmin lên DevOps Engineer.
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+Diễn giả nhấn mạnh rằng kỹ sư cloud không chỉ cần kiến thức kỹ thuật mà còn cần tư duy vận hành, kỹ năng tự động hóa, giám sát hệ thống, xử lý sự cố và giao tiếp với các nhóm khác.
 
-### Ứng Dụng Vào Công Việc
+Điều này giúp em có định hướng rõ hơn để tiếp tục phát triển kỹ năng sau kỳ thực tập.
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+### Kiến thức rút ra
 
-### Trải nghiệm trong event
+* Cloud computing không chỉ là sử dụng dịch vụ AWS mà còn là tư duy thiết kế hệ thống.
+* Virtual Machines, Containers và Serverless đều có ưu điểm và giới hạn riêng.
+* Serverless system cần thiết kế kỹ về quản lý trạng thái, hiệu năng database và kiểm soát chi phí.
+* AWS WAF có thể kết hợp với Machine Learning để phát hiện hành vi mạng bất thường.
+* DevOps tập trung vào automation, monitoring, reliability và cải tiến liên tục.
+* Một kỹ sư cloud hoặc security cần kết hợp kiến thức kỹ thuật và trải nghiệm vận hành thực tế.
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+### Ứng dụng vào dự án thực tập
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+Kiến thức từ sự kiện này có thể áp dụng trực tiếp vào dự án **PharmaCare AI** của em.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+Thứ nhất, phần serverless architecture giúp em hiểu cách thiết kế AWS Lambda cẩn thận hơn. Trong PharmaCare AI, Lambda được dùng làm backend API, vì vậy logic API cần gọn, bảo mật và tối ưu.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+Thứ hai, chủ đề AWS WAF giúp em hiểu lý do nên gắn WAF vào CloudFront để bảo vệ lớp website public khỏi các request bất thường.
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+Thứ ba, tư duy vận hành từ sự kiện giúp em hoàn thiện phần monitoring và security của dự án. Em áp dụng bằng cách cấu hình CloudWatch Logs, CloudWatch Alarms, SNS notification, AWS Backup và IAM least privilege.
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+Cuối cùng, phần chia sẻ nghề nghiệp giúp em có thêm động lực tiếp tục học AWS, Linux, networking, automation, DevOps và cybersecurity.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+### Cảm nhận cá nhân
+
+Sự kiện này giúp em có góc nhìn thực tế hơn về AWS và bảo mật cloud. Thay vì chỉ học qua tài liệu hoặc lab, em được nghe các kinh nghiệm thật từ những anh/chị đã làm việc với hệ thống doanh nghiệp.
+
+Nội dung gây ấn tượng nhất với em là việc kết hợp AWS WAF và Machine Learning để phát hiện tấn công. Vì em học ngành An toàn thông tin, chủ đề này giúp em thấy rõ sự kết nối giữa cloud computing, AI và cybersecurity.
+
+Sự kiện cũng giúp em hiểu rằng xây dựng hệ thống cloud không chỉ là làm cho ứng dụng chạy được. Một hệ thống thực tế còn cần monitoring, backup, security, cost control và quy trình vận hành rõ ràng.
+
+### Hình ảnh sự kiện
+
+***(Kiến trúc cloud và thách thức serverless)***
+
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
+  <img src="/images/events/event1/anh4.jpg" style="width: 35%; margin: 0;" alt="Thách thức khi triển khai serverless">
+  <img src="/images/events/event1/anh5.jpg" style="width: 35%; margin: 0;" alt="Chia sẻ kiến trúc AWS">
+</div>
+
+***(Virtual Machines và Containers)***
+
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
+  <img src="/images/events/event1/anh6.jpg" style="width: 35%; margin: 0;" alt="So sánh Virtual Machines và Containers">
+  <img src="/images/events/event1/anh7.jpg" style="width: 35%; margin: 0;" alt="Chi tiết khác nhau giữa VM và Container">
+</div>
+
+***(AWS WAF và Machine Learning trong bảo mật)***
+
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
+  <img src="/images/events/event1/anh9.jpg" style="width: 35%; margin: 0;" alt="AWS WAF và Machine Learning">
+  <img src="/images/events/event1/anh10.jpg" style="width: 35%; margin: 0;" alt="Phát hiện tấn công mạng bằng WAF và ML">
+</div>
+
+***(Định hướng nghề nghiệp và chia sẻ kinh nghiệm thực tế)***
+
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 2%; margin-bottom: 15px;">
+  <img src="/images/events/event1/anh12.jpg" style="width: 35%; margin: 0;" alt="Hành trình nghề nghiệp từ Sysadmin đến DevOps">
+</div>
+
+> Tóm lại, AWS Community Day giúp em kết nối kiến thức học ở trường với thực tế triển khai cloud. Sự kiện giúp em hiểu rõ hơn về kiến trúc AWS, serverless system, cloud security, AI-based security monitoring và định hướng nghề nghiệp trong ngành công nghệ thông tin.

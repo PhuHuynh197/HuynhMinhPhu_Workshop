@@ -1,59 +1,58 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-04-17
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 1
 
-### Mục tiêu tuần 1:
+* Làm quen với chương trình thực tập **Workforce Bootcamp - First Cloud AI Journey**.
+* Hiểu mục đích của AWS Free Tier và chương trình AWS credit $200.
+* Tìm hiểu các khái niệm cơ bản về điện toán đám mây và các nhóm dịch vụ phổ biến của AWS.
+* Làm quen với AWS Management Console và sử dụng AWS CLI cho các thao tác cơ bản.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần thực hiện trong tuần
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Tham gia buổi định hướng chương trình thực tập. <br> - Tìm hiểu mục tiêu, quy định, lộ trình và kết quả cần đạt của chương trình First Cloud AI Journey. <br> - Chuẩn bị môi trường làm việc cho báo cáo thực tập và các bài workshop AWS. | 17/04/2026 | 17/04/2026 |  |
+| 2 | - Tìm hiểu tổng quan về AWS Free Tier 2025. <br> - Phân biệt Free Account Plan và Paid Account Plan. <br> - Ghi chú nội dung về chương trình AWS credit $200 và cách sử dụng credit hợp lý. | 18/04/2026 | 18/04/2026 | <https://000001.awsstudygroup.com/> |
+| 3 | - Tìm hiểu các nhóm dịch vụ cơ bản của AWS. <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + Security <br> - Ôn lại các dịch vụ AWS thường được sử dụng trong các dự án cloud. | 19/04/2026 | 19/04/2026 | <https://000001.awsstudygroup.com/> |
+| 4 | - Tạo và xác thực tài khoản AWS Free Tier. <br> - Đăng nhập vào AWS Management Console. <br> - Tìm hiểu cách tìm kiếm, truy cập và ghim các dịch vụ AWS trên console. <br> - Kiểm tra Billing Dashboard và thông tin credit. | 20/04/2026 | 20/04/2026 | <https://000001.awsstudygroup.com/> |
+| 5 | - Tìm hiểu kiến thức cơ bản về quản lý chi phí trên AWS. <br> - Nhận diện các dịch vụ có thể phát sinh chi phí cao và các rủi ro chi phí khi thực hành. <br> - Xem lại các khuyến nghị về giám sát và tối ưu chi phí. | 21/04/2026 | 21/04/2026 | <https://000001.awsstudygroup.com/> |
+| 6 | - Tìm hiểu phần giới thiệu và các bước chuẩn bị cho AWS CLI. <br> - Cài đặt AWS CLI trên máy tính cá nhân. <br> - Tìm hiểu ý nghĩa của Access Key, Secret Access Key, default region và output format. | 22/04/2026 | 22/04/2026 | <https://000011.awsstudygroup.com/> |
+| 7 | - Cấu hình AWS CLI bằng lệnh `aws configure`. <br> - Thực hành một số lệnh AWS CLI cơ bản. <br>&emsp; + Kiểm tra phiên bản AWS CLI <br>&emsp; + Kiểm tra thông tin cấu hình hiện tại <br>&emsp; + Xem tài nguyên AWS bằng command line <br> - So sánh cách sử dụng AWS Console và AWS CLI. | 23/04/2026 | 23/04/2026 | <https://000011.awsstudygroup.com/> |
 
+### Kết quả đạt được trong tuần 1
 
-### Kết quả đạt được tuần 1:
+* Hiểu được mục tiêu và cấu trúc của chương trình thực tập **First Cloud AI Journey**.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
+* Nắm được khái niệm cơ bản về AWS Free Tier và cách chương trình AWS credit hỗ trợ quá trình học tập, thực hành.
+
+* Làm quen với các nhóm dịch vụ quan trọng của AWS, bao gồm:
+
   * Compute
   * Storage
-  * Networking 
+  * Networking
   * Database
-  * ...
+  * Security
+  * Monitoring và quản lý chi phí
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Truy cập được AWS Management Console và biết cách điều hướng giữa các dịch vụ AWS.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hiểu được tầm quan trọng của việc kiểm soát chi phí khi sử dụng dịch vụ cloud, đặc biệt khi thực hành bằng AWS credits.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Cài đặt và cấu hình được AWS CLI trên máy tính cá nhân.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hiểu được các thông tin cấu hình cơ bản của AWS CLI, bao gồm:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+  * AWS Access Key ID
+  * AWS Secret Access Key
+  * Default region
+  * Default output format
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thực hành các thao tác AWS CLI cơ bản và hiểu cách dùng AWS CLI để quản lý dịch vụ AWS bằng command line.
 
-
+* Hoàn thành tuần đầu tiên với nền tảng cơ bản để tiếp tục các bài lab AWS ở những tuần tiếp theo.

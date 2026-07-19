@@ -1,57 +1,77 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-22
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 6 Objectives
 
-### Week 6 Objectives:
+* Understand how to improve application availability and scalability using Elastic Load Balancing and Auto Scaling Group.
+* Learn how to create Launch Template, Target Group, Application Load Balancer, and Auto Scaling Group.
+* Practice testing manual scaling, scheduled scaling, dynamic scaling, and predictive scaling metrics.
+* Learn the basic concept of Docker and containerized application deployment.
+* Practice deploying an application using Docker image and Docker Compose.
+* Understand the basic workflow of deploying containerized applications on Amazon ECS.
+* Learn how to clean up compute, container, load balancing, and database resources to avoid unnecessary cost.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks to be carried out this week
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Studied the overview of deploying an application with Auto Scaling Group. <br> - Reviewed the base application deployment from previous EC2 labs. <br> - Learned why Auto Scaling Group and Load Balancer are used to improve availability, fault tolerance, and scalability. | 22/05/2026 | 22/05/2026 | <https://000006.awsstudygroup.com/> |
+| 2 | - Prepared the application infrastructure for Auto Scaling. <br> - Set up network infrastructure, EC2 instance, RDS database, and web server environment. <br> - Prepared sample data for the database and verified the application before scaling. | 23/05/2026 | 23/05/2026 | <https://000006.awsstudygroup.com/> |
+| 3 | - Created Launch Template for EC2 instances. <br> - Created Target Group for the application. <br> - Configured Application Load Balancer to distribute traffic to application instances. <br> - Tested access through the Load Balancer endpoint. | 24/05/2026 | 24/05/2026 | <https://000006.awsstudygroup.com/> |
+| 4 | - Created Auto Scaling Group using the Launch Template. <br> - Attached Auto Scaling Group to the Target Group and Load Balancer. <br> - Tested manual scaling and reviewed how EC2 instances were added or removed. <br> - Studied scheduled scaling, dynamic scaling, and predictive scaling metrics. | 25/05/2026 | 25/05/2026 | <https://000006.awsstudygroup.com/> |
+| 5 | - Studied the basic concept of Docker and containerization. <br> - Installed required dependencies for local Docker deployment. <br> - Deployed and tested the application on the local environment. <br> - Prepared VPC, Security Group, IAM role, EC2, and RDS resources for Docker deployment on AWS. | 26/05/2026 | 26/05/2026 | <https://000015.awsstudygroup.com/> |
+| 6 | - Deployed the application using Docker image on EC2. <br> - Deployed the application using Docker Compose. <br> - Practiced pushing Docker image to Amazon ECR or Docker Hub. <br> - Tested the containerized application through the browser. | 27/05/2026 | 27/05/2026 | <https://000015.awsstudygroup.com/> |
+| 7 | - Studied the basic workflow of Amazon ECS deployment. <br> - Reviewed ECS Cluster, Task Definition, ECS Service, Cloud Map, and Application Load Balancer. <br> - Learned the difference between Blue/Green deployment and Rolling deployment. <br> - Cleaned up Auto Scaling, Load Balancer, EC2, RDS, Docker, ECS, ECR, NAT Gateway, and related resources to reduce unnecessary cost. | 28/05/2026 | 28/05/2026 | <https://000016.awsstudygroup.com/> |
 
+### Week 6 Achievements
 
-### Week 6 Achievements:
+* Understood how Auto Scaling Group helps maintain application availability and automatically adjusts capacity based on demand.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood how Application Load Balancer distributes user traffic across multiple application instances.
 
-* Successfully created and configured an AWS Free Tier account.
+* Practiced preparing infrastructure for a scalable application, including:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+  * VPC
+  * EC2 instance
+  * RDS database
+  * Launch Template
+  * Target Group
+  * Application Load Balancer
+  * Auto Scaling Group
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Learned the purpose of different scaling approaches, including:
 
-* Used AWS CLI to perform basic operations such as:
+  * Manual scaling
+  * Scheduled scaling
+  * Dynamic scaling
+  * Predictive scaling metrics
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Understood the relationship between Load Balancer, Target Group, and Auto Scaling Group.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Learned the basic concept of Docker and why containers help package applications with their dependencies.
+
+* Practiced deploying an application using Docker image.
+
+* Practiced deploying an application using Docker Compose.
+
+* Learned how container images can be stored and shared using Amazon ECR or Docker Hub.
+
+* Understood the basic components of Amazon ECS, including:
+
+  * ECS Cluster
+  * Task Definition
+  * ECS Service
+  * Container image
+  * Application Load Balancer
+  * Cloud Map
+
+* Learned the difference between Blue/Green deployment and Rolling deployment at a basic level.
+
+* Understood that some resources such as Load Balancer, NAT Gateway, RDS, ECS, and running EC2 instances can generate cost if not cleaned up.
+
+* Completed week 6 with a stronger understanding of application scalability, container deployment, and container orchestration on AWS.

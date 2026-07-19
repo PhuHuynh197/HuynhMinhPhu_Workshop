@@ -1,59 +1,87 @@
 ---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2026-06-12
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 9
 
-### Mục tiêu tuần 9:
+* Bắt đầu triển khai hạ tầng AWS nền tảng cho hệ thống **PharmaCare AI**.
+* Tạo VPC riêng cho hệ thống để tách biệt các lớp frontend, backend, database và AI.
+* Thiết kế public subnet, private app subnet và private database subnet theo kiến trúc đã xây dựng.
+* Triển khai Amazon RDS PostgreSQL làm cơ sở dữ liệu chính cho website nhà thuốc.
+* Cấu hình Security Group để Lambda backend kết nối an toàn đến RDS qua port `5432`.
+* Sử dụng AWS Secrets Manager để lưu thông tin kết nối database thay vì hard-code trong source code.
+* Tạo VPC Endpoint để các tài nguyên trong private subnet có thể truy cập dịch vụ AWS nội bộ.
+* Tạo Lambda migration để khởi tạo schema database ban đầu cho hệ thống.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần thực hiện trong tuần
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+| --- | --- | --- | --- |
+| 1 | - Bắt đầu triển khai hạ tầng AWS cho dự án **PharmaCare AI**. <br> - Rà soát lại sơ đồ kiến trúc tổng thể của hệ thống. <br> - Xác định các lớp chính gồm Global layer, Frontend layer, Private App Subnet, RDS DB Subnet, OpenSearch VPC Subnet, Monitoring & Security layer. <br> - Lên kế hoạch triển khai hạ tầng theo thứ tự: VPC → subnet → route table → security group → RDS → Secrets Manager → Lambda migration. | 12/06/2026 | 12/06/2026 |
+| 2 | - Tạo VPC riêng cho hệ thống với tên `pharmacare-vpc`. <br> - Sử dụng region `ap-southeast-1`. <br> - Cấu hình CIDR block `10.0.0.0/16` cho VPC. <br> - Kiểm tra VPC Resource Map để đảm bảo VPC được tạo đúng và có thể tiếp tục chia subnet cho các lớp hệ thống. | 13/06/2026 | 13/06/2026 |
+| 3 | - Tạo các subnet trong VPC theo từng lớp mạng. <br> - Tạo public subnet cho các thành phần cần kết nối Internet. <br> - Tạo private app subnet để đặt Lambda backend, Lambda chatbot và Lambda indexing. <br> - Tạo private database subnet để đặt Amazon RDS PostgreSQL. <br> - Phân bổ subnet theo nhiều Availability Zone để hỗ trợ tính sẵn sàng của hệ thống. | 14/06/2026 | 14/06/2026 |
+| 4 | - Tạo và gắn Internet Gateway cho VPC. <br> - Tạo route table cho public subnet và private subnet. <br> - Cấu hình public route table trỏ ra Internet Gateway. <br> - Giữ private app subnet và private database subnet không public trực tiếp ra Internet. <br> - Kiểm tra lại route table để đảm bảo traffic của từng subnet đi đúng theo thiết kế. | 15/06/2026 | 15/06/2026 |
+| 5 | - Tạo Security Group cho các lớp ứng dụng và database. <br> - Cấu hình Security Group của RDS chỉ cho phép kết nối PostgreSQL port `5432` từ Security Group của Lambda backend. <br> - Không mở port database cho public internet. <br> - Tạo Security Group cho VPC Endpoint để các Lambda trong private subnet có thể gọi dịch vụ AWS nội bộ. | 16/06/2026 | 16/06/2026 |
+| 6 | - Tạo Amazon RDS PostgreSQL làm database chính của hệ thống. <br> - Tạo database tên `pharmacare_ai`. <br> - Đặt RDS trong private database subnet. <br> - Tắt public access cho RDS để database không bị truy cập trực tiếp từ Internet. <br> - Tạo secret trong AWS Secrets Manager để lưu username, password, host, port và thông tin kết nối database. <br> - Tạo VPC Endpoint cho Secrets Manager để Lambda lấy database credential an toàn trong mạng riêng. | 17/06/2026 | 17/06/2026 |
+| 7 | - Tạo IAM Role cho Lambda migration. <br> - Tạo Lambda function `pharmacare-db-migration`. <br> - Gắn Lambda migration vào VPC và private app subnet để có thể kết nối RDS. <br> - Cấu hình environment variables gồm `AWS_REGION`, `RDS_SECRET_ARN` và `DB_NAME`. <br> - Tăng timeout cho Lambda vì migration cần chạy SQL tạo nhiều bảng. <br> - Nén code migration thành file ZIP và upload lên Lambda. <br> - Chạy migration để tạo schema database ban đầu cho hệ thống PharmaCare AI. | 18/06/2026 | 18/06/2026 |
 
+### Kết quả đạt được trong tuần 9
 
-### Kết quả đạt được tuần 9:
+* Hoàn thành hạ tầng AWS nền tảng cho hệ thống **PharmaCare AI**.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Tạo được VPC riêng tên `pharmacare-vpc` tại region `ap-southeast-1`.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Thiết kế hệ thống mạng thành nhiều lớp rõ ràng:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+  * Public subnet
+  * Private app subnet
+  * Private database subnet
+  * RDS DB subnet group
+  * OpenSearch VPC subnet cho các thành phần AI/RAG ở giai đoạn sau
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Hiểu rõ vai trò của từng lớp mạng trong kiến trúc:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  * Public subnet phục vụ các thành phần cần giao tiếp Internet.
+  * Private app subnet dùng cho Lambda backend, Lambda chatbot và Lambda indexing.
+  * Private database subnet dùng cho Amazon RDS PostgreSQL.
+  * OpenSearch VPC subnet dùng cho vector store ở phần AI/RAG.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Tạo và cấu hình Internet Gateway, route table cho VPC.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Cấu hình Security Group theo nguyên tắc chỉ mở đúng kết nối cần thiết.
 
+* Đảm bảo RDS PostgreSQL không public trực tiếp ra Internet.
 
+* Tạo Amazon RDS PostgreSQL làm database chính của dự án với database name `pharmacare_ai`.
+
+* Sử dụng AWS Secrets Manager để lưu thông tin kết nối database an toàn.
+
+* Tạo VPC Endpoint cho Secrets Manager để Lambda trong private subnet có thể lấy secret mà không cần đi qua public internet.
+
+* Tạo IAM Role và Lambda migration để khởi tạo database schema.
+
+* Cấu hình timeout và environment variables cho Lambda migration.
+
+* Tạo các bảng chính cho hệ thống, bao gồm:
+
+  * `users`
+  * `categories`
+  * `brands`
+  * `products`
+  * `stores`
+  * `carts`
+  * `cart_items`
+  * `orders`
+  * `order_items`
+  * `payments`
+  * `prescriptions`
+  * `articles`
+  * `chatbot_documents`
+  * `chat_sessions`
+  * `chat_messages`
+
+* Hoàn thành tuần 9 với nền tảng hạ tầng, database private, Secrets Manager và database migration hoạt động ổn định để chuẩn bị triển khai backend API ở tuần 10.

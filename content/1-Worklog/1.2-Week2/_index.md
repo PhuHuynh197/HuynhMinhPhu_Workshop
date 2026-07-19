@@ -1,57 +1,60 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-04-24
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 2 Objectives
 
-### Week 2 Objectives:
+* Understand the purpose of AWS Identity and Access Management (IAM).
+* Learn how to manage access permissions using IAM users, groups, policies, and roles.
+* Practice creating IAM groups and IAM users with suitable permissions.
+* Understand how IAM Role and Switch Role are used to provide temporary and controlled access.
+* Learn how to clean up IAM resources after finishing the practice lab.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks to be carried out this week
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Studied the overview of AWS Identity and Access Management. <br> - Learned why IAM is important for securing AWS accounts and resources. <br> - Took notes about authentication, authorization, and the principle of least privilege. | 24/04/2026 | 24/04/2026 | <https://000002.awsstudygroup.com/> |
+| 2 | - Learned about IAM User and IAM Group. <br> - Understood how groups help manage permissions for multiple users. <br> - Practiced creating an Admin Group and assigning suitable permissions. | 25/04/2026 | 25/04/2026 | <https://000002.awsstudygroup.com/> |
+| 3 | - Created an IAM Admin User. <br> - Added the user to the Admin Group. <br> - Practiced signing in with the IAM user instead of using the root account. <br> - Compared the difference between root user and IAM user. | 26/04/2026 | 26/04/2026 | <https://000002.awsstudygroup.com/> |
+| 4 | - Learned about IAM Policy. <br> - Studied how policies define allowed and denied actions. <br> - Reviewed the basic policy structure, including Effect, Action, Resource, and Condition. <br> - Applied permissions to users and groups. | 27/04/2026 | 27/04/2026 | <https://000002.awsstudygroup.com/> |
+| 5 | - Learned about IAM Role. <br> - Created an Admin Role for temporary access. <br> - Created an OperatorUser and prepared permission configuration for role switching. <br> - Understood why roles are safer than sharing long-term credentials. | 28/04/2026 | 28/04/2026 | <https://000002.awsstudygroup.com/> |
+| 6 | - Practiced Switch Role in AWS Console. <br> - Allowed OperatorUser to switch to the Admin Role. <br> - Tested access after switching role. <br> - Verified that permissions changed according to the selected role. | 29/04/2026 | 29/04/2026 | <https://000002.awsstudygroup.com/> |
+| 7 | - Reviewed IAM best practices. <br> - Checked the created IAM users, groups, policies, and roles. <br> - Cleaned up IAM resources after completing the lab. <br> - Summarized the role of IAM in securing AWS projects. | 30/04/2026 | 30/04/2026 | <https://000002.awsstudygroup.com/> |
 
+### Week 2 Achievements
 
-### Week 2 Achievements:
+* Understood the role of AWS IAM in managing secure access to AWS services and resources.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Learned the difference between:
 
-* Successfully created and configured an AWS Free Tier account.
+  * Root user
+  * IAM user
+  * IAM group
+  * IAM policy
+  * IAM role
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Practiced creating IAM groups and IAM users for access management.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Understood how IAM policies are used to control permissions through policy documents.
 
-* Used AWS CLI to perform basic operations such as:
+* Learned the basic structure of an IAM policy, including:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+  * Effect
+  * Action
+  * Resource
+  * Condition
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Practiced using IAM Role and Switch Role to provide temporary permissions.
+
+* Understood the principle of least privilege, which means each user should only receive the permissions required for their tasks.
+
+* Understood why the root account should not be used for daily operations.
+
+* Learned the importance of cleaning up IAM resources after practice to keep the AWS environment secure and organized.
+
+* Completed the second week with a stronger understanding of identity management and permission control on AWS.
