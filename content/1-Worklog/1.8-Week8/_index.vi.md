@@ -19,7 +19,7 @@ pre: " <b> 1.8. </b> "
 
 Sơ đồ bên dưới thể hiện kiến trúc AWS được đề xuất cho dự án **PharmaCare AI – Website Nhà Thuốc Online & Chatbot AI**.
 
-{{< figure src="/HuynhMinhPhu_Workshop/images/proposal/dia1.png" title="AWS Architecture - PharmaCare AI" width="900px" >}}
+{{< figure src="/HuynhMinhPhu_Workshop/images/proposal/dia02.jpg" title="AWS Architecture - PharmaCare AI" width="900px" >}}
 
 Hệ thống được thiết kế theo hướng serverless và sử dụng các dịch vụ được quản lý trên AWS. Frontend được lưu trữ trên Amazon S3 và phân phối thông qua Amazon CloudFront. Chức năng xác thực người dùng sử dụng Amazon Cognito. Các API nghiệp vụ được tiếp nhận bởi Amazon API Gateway và xử lý bằng AWS Lambda. Dữ liệu chính của nhà thuốc được lưu trong Amazon RDS Multi-AZ, còn phần chatbot sử dụng Amazon OpenSearch Service làm vector store và Amazon Bedrock để tạo câu trả lời AI.
 
